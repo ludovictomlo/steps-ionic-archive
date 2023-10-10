@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"os"
 	"path/filepath"
-	"strconv"
 	"sort"
+	"strconv"
 	"strings"
 	"time"
 
@@ -19,9 +19,9 @@ import (
 	"github.com/bitrise-io/go-utils/pathutil"
 	"github.com/bitrise-io/go-utils/sliceutil"
 	"github.com/bitrise-io/go-utils/ziputil"
-	"github.com/ludovictomlo/steps-ionic-archive/ionic"
 	ver "github.com/hashicorp/go-version"
 	shellquote "github.com/kballard/go-shellquote"
+	"github.com/ludovictomlo/steps-ionic-archive/ionic"
 )
 
 const (
@@ -372,6 +372,7 @@ func main() {
 
 	var ipas, dsyms, apps []string
 	iosOutputDir := filepath.Join(workDir, "platforms", "ios", "build", findIosTargetPathComponent(configs.Target, configs.Configuration, configs.CordovaVersion))
+	fail("Fake fail for output dir: %s", iosOutputDir)
 	log.Debugf("iOS output directory: %s", iosOutputDir)
 	if exist, err := pathutil.IsDirExists(iosOutputDir); err != nil {
 		fail("Failed to check if dir (%s) exist, error: %s", iosOutputDir, err)
