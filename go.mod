@@ -1,4 +1,4 @@
-module github.com/bitrise-steplib/steps-ionic-archive
+module github.com/ludovictomlo/steps-ionic-archive
 
 go 1.16
 

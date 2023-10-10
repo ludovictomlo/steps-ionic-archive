@@ -19,7 +19,7 @@ import (
 	"github.com/bitrise-io/go-utils/pathutil"
 	"github.com/bitrise-io/go-utils/sliceutil"
 	"github.com/bitrise-io/go-utils/ziputil"
-	"github.com/bitrise-steplib/steps-ionic-archive/ionic"
+	"github.com/ludovictomlo/steps-ionic-archive/ionic"
 	ver "github.com/hashicorp/go-version"
 	shellquote "github.com/kballard/go-shellquote"
 )
