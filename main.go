@@ -371,8 +371,8 @@ func main() {
 	// collect outputs
 
 	var ipas, dsyms, apps []string
-	iosOutputDir := filepath.Join(workDir, "platforms", "ios", "build", findIosTargetPathComponent(configs.Target, configs.Configuration, configs.CordovaVersion))
-	fail("Fake fail for output dir: %s", iosOutputDir)
+	iosOutputDir := filepath.Join(workDir, "platforms", "ios", "build", "Release-iphoneos")
+	// fail("Fake fail for output dir: %s", iosOutputDir)
 	log.Debugf("iOS output directory: %s", iosOutputDir)
 	if exist, err := pathutil.IsDirExists(iosOutputDir); err != nil {
 		fail("Failed to check if dir (%s) exist, error: %s", iosOutputDir, err)
